@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f2ecdf">
+<title>机器服务于人 · 人机协同压缩框架 — 文献 · Letter</title>
+<meta name="description" content="Machines Serve Human 的中英对照阅读页：摘要、方法与贡献、实验结论、术语与笔记。">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#article">跳到正文</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="https://www.lymochi.top/"><b>LYMOCHI</b><span class="reg">®</span></a>
+    <span class="sep">/</span>
+    <a class="sub" href="../">LETTER</a>
+    <nav class="nav" aria-label="主导航">
+      <a href="../">目录</a>
+      <a href="https://www.lymochi.top/">主页</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="doc-crumb" aria-label="面包屑">
+    <a href="../">目录</a><span class="slash">/</span><span>01</span><span class="slash">/</span><span>人机协同</span>
+  </nav>
+</div>
+
+<header class="wrap doc-head">
+  <p class="doc-kicker">
+    <span class="pill">2026</span>
+    <span class="pill placeholder">占位示例</span>
+    <span>人机协同 · 框架</span>
+  </p>
+  <h1 class="doc-title">机器服务于人：一种可变的人机协同压缩框架</h1>
+  <p class="doc-en" lang="en">Machines Serve Human: A Novel Variable Human-Machine Collaborative Compression Framework</p>
+  <p class="doc-meta">
+    <span><i>作者</i> 待补</span>
+    <span><i>来源</i> 待补</span>
+    <span><i>状态</i> 在读</span>
+    <span><i>更新</i> 2026-11</span>
+  </p>
+</header>
+
+<div class="readbar">
+  <div class="wrap readbar-inner">
+    <span class="label">阅读</span>
+    <div class="seg" role="group" aria-label="阅读模式">
+      <button type="button" data-mode="both" aria-pressed="true">双语</button>
+      <button type="button" data-mode="zh">中文</button>
+      <button type="button" data-mode="en">EN</button>
+    </div>
+    <span class="print"><a href="#" onclick="window.print();return false;">打印 / 存 PDF</a></span>
+  </div>
+</div>
+
+<main id="main">
+<div class="wrap layout">
+
+  <aside class="toc">
+    <p class="toc-title">Contents</p>
+    <ol>
+      <li><a href="#s1">一句话</a></li>
+      <li><a href="#s2">摘要</a></li>
+      <li><a href="#s3">方法与贡献</a></li>
+      <li><a href="#s4">实验与结论</a></li>
+      <li><a href="#s5">我的笔记</a></li>
+      <li><a href="#s6">术语表</a></li>
+      <li><a href="#s7">原文与延伸</a></li>
+    </ol>
+  </aside>
+
+  <article class="article" id="article">
+
+    <p class="note note--todo">
+      <span class="note-tag">Placeholder</span>
+      这一页是占位稿。下面的英文段落只是排版示例，<strong>不是论文原文摘录</strong>；
+      把中英文换成你自己的译文和笔记，页面结构不用动。
+    </p>
+
+    <section id="s1">
+      <div class="sec-head"><span class="sec-no">01</span><h2>一句话</h2></div>
+      <p class="oneliner placeholder">还没写。读完之后，用一句话说明它解决了什么问题、怎么解决的。</p>
+    </section>
+
+    <section id="s2">
+      <div class="sec-head"><span class="sec-no">02</span><h2>摘要</h2></div>
+
+      <div class="bi">
+        <p class="en" lang="en">Image and video are consumed by two kinds of viewers at the same time: people who look at them, and models that analyse them. A codec built for only one of them wastes bitrate on information the other does not need.</p>
+        <p class="zh">图像和视频同时被两类观看者消费：真正在看的人，和分析它们的模型。只为其中一方设计的编码器，会把码率浪费在另一方并不需要的信息上。</p>
+      </div>
+
+      <div class="bi">
+        <p class="en" lang="en">This work studies how far a single bitstream can serve both, and whether the balance can be adjusted at encoding time instead of being fixed by the architecture.</p>
+        <p class="zh">这项工作关心的是：同一路码流能在多大程度上同时服务两者，以及这个平衡能否在编码时调整，而不是被网络结构固定死。</p>
+      </div>
+    </section>
+
+    <section id="s3">
+      <div class="sec-head"><span class="sec-no">03</span><h2>方法与贡献</h2></div>
+
+      <ul>
+        <li><strong>问题设定</strong>：把「人看的质量」和「机器任务精度」拆成两个可分别度量的目标。</li>
+        <li><strong>可变平衡</strong>：在推理时通过一个参数控制偏向，而不必重训两套模型。</li>
+        <li><strong>评测方式</strong>：同时报告重建指标与下游任务指标（示例，待补具体数字）。</li>
+      </ul>
+
+      <div class="bi">
+        <p class="en" lang="en">The framework keeps one shared representation and lets the decoder spend bits where they matter for the chosen target.</p>
+        <p class="zh">框架共用一套表征，由解码端把比特优先花在当前目标真正在意的地方。</p>
+      </div>
+
+      <p class="note">
+        <span class="note-tag">Note</span>
+        读到这里记下：它是<strong>训练目标层面</strong>做平衡，还是<strong>码率分配层面</strong>做平衡？这两者对部署成本的影响完全不同。
+      </p>
+    </section>
+
+    <section id="s4">
+      <div class="sec-head"><span class="sec-no">04</span><h2>实验与结论</h2></div>
+      <p class="note note--todo">
+        <span class="note-tag">待补</span>
+        数据集、对比方法、BD-rate / 任务精度表格放在这里。可以先把表格骨架抄下来，数字之后再填。
+      </p>
+      <div class="bi">
+        <p class="en" lang="en">Results show a tunable trade-off between perceptual quality and task accuracy at a fixed total rate.</p>
+        <p class="zh">结果显示，在总码率固定的前提下，感知质量与任务精度之间存在可调的折中。</p>
+      </div>
+    </section>
+
+    <section id="s5">
+      <div class="sec-head"><span class="sec-no">05</span><h2>我的笔记</h2></div>
+      <p>想清楚的三件事：</p>
+      <ol>
+        <li>它和「可分级编码」的关系是什么——是不同的切分维度，还是同一件事的两种说法？</li>
+        <li>如果机器任务变多，这套平衡还成立吗？</li>
+        <li>有没有可能把「人」也当成一个任务分支来统一建模？</li>
+      </ol>
+      <p>还没解决的疑问：多任务同时请求时，比特预算怎么分？</p>
+    </section>
+
+    <section id="s6">
+      <div class="sec-head"><span class="sec-no">06</span><h2>术语表</h2></div>
+      <table class="terms">
+        <thead><tr><th>English</th><th>中文</th><th>我的理解</th></tr></thead>
+        <tbody>
+          <tr><td>human-machine collaborative</td><td>人机协同</td><td>同一份内容同时服务人眼与算法。</td></tr>
+          <tr><td>rate–accuracy trade-off</td><td>码率—精度折中</td><td>多给比特，机器任务更准，但不一定更好看。</td></tr>
+          <tr><td>scalable coding</td><td>可分级编码</td><td>一个码流按需截断出不同质量层。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="s7">
+      <div class="sec-head"><span class="sec-no">07</span><h2>原文与延伸</h2></div>
+      <p>原文 PDF 放在本地或网盘时，把链接补在这里；相关工作的页面也可以互相链过去。</p>
+      <p class="plain-en" lang="en">TODO: DOI / arXiv link / project page.</p>
+    </section>
+
+    <nav class="pager" aria-label="翻页">
+      <a href="../"><span class="dir">Back</span><span class="name">返回目录</span></a>
+      <a class="next" href="scalable-face-stylegan.html"><span class="dir">Next</span><span class="name">基于 StyleGAN 先验的可分级人脸编码</span></a>
+    </nav>
+
+  </article>
+</div>
+</main>
+
+<footer class="foot wrap">
+  <span>© 2026 Lymochi</span>
+  <span>文献 · Letter</span>
+  <span class="grow"><a href="../">← 回到目录</a></span>
+</footer>
+
+<script src="../assets/paper.js"></script>
+</body>
+</html>
