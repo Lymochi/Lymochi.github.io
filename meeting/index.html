@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>会议论文 · 中英对照</title>
+<style>
+:root{--ink:#23323c;--muted:#69747a;--accent:#19636a;--line:#dce3df}
+*{box-sizing:border-box}
+body{margin:0;background:#f7f6f2;color:var(--ink);font-family:"Segoe UI","Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif;line-height:1.7}
+.shell{max-width:880px;margin:auto;padding:40px 24px 80px}
+.back{font-size:12px;letter-spacing:.1em;font-weight:700;color:var(--accent);text-decoration:none}
+.eyebrow{margin-top:34px;font-size:12px;letter-spacing:.12em;font-weight:700;color:var(--accent)}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(30px,5vw,44px);font-weight:500;line-height:1.2;margin:14px 0}
+.lead{color:var(--muted);font-size:15px;margin:0 0 34px}
+.list{display:grid;gap:14px}
+.item{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:8px;padding:22px 24px;transition:border-color .2s ease,transform .2s ease}
+.item:hover{border-color:var(--accent);transform:translateY(-1px)}
+.meta{font-size:12px;letter-spacing:.08em;color:var(--accent);font-weight:700}
+.meta span{color:var(--muted);font-weight:600}
+.zh{font-size:18px;font-weight:600;margin:6px 0 4px}
+.en{font-size:13px;color:var(--muted);font-family:Georgia,"Times New Roman",serif;line-height:1.5}
+.foot{margin-top:38px;font-size:13px;color:var(--muted)}
+.foot a{color:var(--accent)}
+@media(max-width:600px){.shell{padding:26px 16px 60px}.item{padding:18px}}
+</style>
+</head>
+<body>
+<main class="shell">
+<a class="back" href="https://www.lymochi.top/">← LYMOCHI</a>
+<div class="eyebrow">MEETING PAPERS · 04</div>
+<h1>会议论文 · 中英对照</h1>
+<p class="lead">四篇图像压缩论文的中英对照阅读页，逐段或短句排版，适合顺着原文精读。</p>
+<div class="list">
+<a class="item" href="arpc.html">
+  <div class="meta">ICLR 2026 <span>· 逐段对照</span></div>
+  <div class="zh">ARPC：面向超低码率图像压缩的自回归渐进编码</div>
+  <div class="en" lang="en">Autoregressive-Based Progressive Coding for Ultra-Low Bitrate Image Compression</div>
+</a>
+<a class="item" href="dit-ic.html">
+  <div class="meta">CVPR 2026 <span>· 逐段对照</span></div>
+  <div class="zh">DiT-IC：用于高效图像压缩的对齐扩散 Transformer</div>
+  <div class="en" lang="en">DiT-IC: Aligned Diffusion Transformer for Efficient Image Compression</div>
+</a>
+<a class="item" href="resarc.html">
+  <div class="meta">arXiv 2026 <span>· 短句对照</span></div>
+  <div class="zh">ResARC：面向极低码率图像压缩的残差感知自回归编码</div>
+  <div class="en" lang="en">ResARC: Residual-Aware AutoRegressive Coding for Ultra-Low Bitrate Image Compression</div>
+</a>
+<a class="item" href="tfgc.html">
+  <div class="meta">CVPR 2026 <span>· 短句对照</span></div>
+  <div class="zh">迈向统一的人类感知与机器理解：词元流引导压缩框架</div>
+  <div class="en" lang="en">Towards Unified Human Perception and Machine Understanding: Token Flow Guided Compression Framework</div>
+</a>
+</div>
+<p class="foot">页面为完整 HTML 导出件，含原文与译文，可离线阅读。另有 <a href="https://www.lymochi.top/papers/">七篇图像压缩论文精读 →</a></p>
+</main>
+</body>
+</html>
